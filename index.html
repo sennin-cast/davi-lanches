@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Davi Lanches Hamburgueria | Sabor em cada mordida!</title>
+  <meta name="description" content="Cardápio digital oficial da Davi Lanches Hamburgueria Since 2015. Faça seu pedido online com entrega rápida e frete fixo de R$ 5,00 para qualquer pedido no Rio de Janeiro!">
+  
+  <!-- Favicon Oficial -->
+  <link rel="icon" type="image/jpeg" href="assets/images/logo_davi_lanches.jpg">
+  <link rel="apple-touch-icon" href="assets/images/logo_davi_lanches.jpg">
+
+  <!-- Open Graph / Redes Sociais / WhatsApp Preview -->
+  <meta property="og:title" content="Davi Lanches Hamburgueria | Sabor em cada mordida!">
+  <meta property="og:description" content="Cardápio digital oficial com entrega rápida. Frete fixo de R$ 5,00 em qualquer pedido!">
+  <meta property="og:image" content="assets/images/logo_davi_lanches.jpg">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#121212">
+  
+  <!-- Fonts & FontAwesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="top-bar">
+    <span><div class="pulse-dot"></div> ABERTO AGORA • DELIVERY ATIVO</span>
+    <span class="top-bar-divider">|</span>
+    <span class="top-bar-frete"><i class="fa-solid fa-motorcycle"></i> <strong>FRETE FIXO R$ 5,00</strong> EM TODOS OS PEDIDOS</span>
+    <span class="top-bar-divider">|</span>
+    <span><i class="fa-brands fa-whatsapp"></i> (21) 97311-2436</span>
+  </div>
+
+  <!-- Header & Navigation Bar -->
+  <header class="main-header">
+    <div class="container header-wrapper">
+      <a href="#" class="brand-logo-group" id="brand-logo-link">
+        <div class="brand-logo-badge">
+          <img src="assets/images/logo_davi_lanches.jpg" alt="Logo Oficial Davi Lanches" class="brand-logo-img">
+        </div>
+        <div class="brand-info">
+          <h1>DAVI <span>LANCHES</span></h1>
+          <div class="since-tag"><i class="fa-solid fa-star"></i> Since 2015 • Sabor em cada mordida!</div>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <a href="https://wa.me/5521973112436" target="_blank" class="contact-pill" id="whatsapp-header-pill">
+          <i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 1.1rem;"></i>
+          <span>(21) 97311-2436</span>
+        </a>
+
+        <button class="cart-btn-header" id="btn-open-cart-header" aria-label="Abrir Carrinho">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span>Carrinho</span>
+          <div class="cart-badge" id="cart-badge-header">0</div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="container">
+    
+    <!-- Hero / Banner Showcase Slider -->
+    <section class="hero-showcase">
+      <div class="hero-card">
+        <div class="hero-content">
+          <div class="hero-badges-row">
+            <div class="hero-tag"><i class="fa-solid fa-fire"></i> Destaque da Semana</div>
+            <div class="hero-tag frete-tag"><i class="fa-solid fa-motorcycle"></i> Frete Fixo R$ 5,00</div>
+          </div>
+          <h2 class="hero-title">COMBO <span class="highlight">MONTANHA</span></h2>
+          <p class="hero-subtitle">3 X-Montanha suculentos na sua telinha com super desconto especial!</p>
+          
+          <div class="hero-features">
+            <div class="hero-feature-item"><i class="fa-solid fa-motorcycle"></i> Frete R$ 5,00 Qualquer Pedido</div>
+            <div class="hero-feature-item"><i class="fa-solid fa-check"></i> Sabor Incomparável</div>
+            <div class="hero-feature-item"><i class="fa-solid fa-clock"></i> Entrega Rápida no RJ</div>
+          </div>
+
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="openItemModal('c5')">
+              <i class="fa-solid fa-bag-shopping"></i> Pedir por R$ 40,00
+            </button>
+            <a href="#cardapio" class="btn-secondary">
+              <i class="fa-solid fa-utensils"></i> Ver Cardápio
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <img src="assets/images/combo_montanha_banner.jpg" alt="Combo Montanha Davi Lanches" id="hero-banner-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- Filters & Search Bar Section -->
+    <section class="controls-wrapper" id="cardapio">
+      
+      <!-- Search Input -->
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="menu-search-input" placeholder="Buscar X-Burguer, Combo, Batata Frita, Coca-Cola...">
+        <button id="search-clear-btn" class="search-clear-btn" style="display: none;" aria-label="Limpar busca"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- Filter Tabs -->
+      <nav class="category-nav">
+        <button class="category-tab active" data-category="todos" id="tab-todos">
+          <i class="fa-solid fa-border-all"></i> Todos os Itens
+        </button>
+        <button class="category-tab" data-category="combos" id="tab-combos">
+          <i class="fa-solid fa-fire"></i> Combos Promocionais
+        </button>
+        <button class="category-tab" data-category="sanduiches" id="tab-sanduiches">
+          <i class="fa-solid fa-burger"></i> Sanduíches
+        </button>
+        <button class="category-tab" data-category="batatas" id="tab-batatas">
+          <i class="fa-solid fa-box-archive"></i> Batatas Fritas
+        </button>
+        <button class="category-tab" data-category="bebidas" id="tab-bebidas">
+          <i class="fa-solid fa-bottle-water"></i> Bebidas
+        </button>
+      </nav>
+
+    </section>
+
+    <!-- Menu Sections Header & Products Grid -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title" id="current-category-title">
+          <i class="fa-solid fa-burger"></i> Cardápio Completo
+        </h2>
+        <span class="section-count" id="items-count-badge">27 itens</span>
+      </div>
+
+      <div class="products-grid" id="products-grid-container">
+        <!-- Injected via JavaScript -->
+      </div>
+    </section>
+
+    <!-- Official Visual Menu Posters Showcase -->
+    <section class="posters-section">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">
+            <i class="fa-solid fa-image"></i> Cardápios Visuais Oficiais
+          </h2>
+          <p class="section-subtitle-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Clique em qualquer cardápio para ampliar em tela cheia</p>
+        </div>
+      </div>
+      <div class="posters-grid">
+        <div class="poster-card" onclick="openPosterLightbox('assets/images/cardapio_combos_poster.jpg', 'Cardápio Oficial de Combos Promocionais')">
+          <img src="assets/images/cardapio_combos_poster.jpg" alt="Poster de Combos Davi Lanches" loading="lazy">
+          <div class="poster-overlay-badge"><i class="fa-solid fa-magnifying-glass-plus"></i> Ampliar Cardápio</div>
+        </div>
+        <div class="poster-card" onclick="openPosterLightbox('assets/images/cardapio_sanduiches_poster.jpg', 'Cardápio Oficial de Sanduíches Artesanais')">
+          <img src="assets/images/cardapio_sanduiches_poster.jpg" alt="Poster de Sanduíches Davi Lanches" loading="lazy">
+          <div class="poster-overlay-badge"><i class="fa-solid fa-magnifying-glass-plus"></i> Ampliar Cardápio</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Item Customization Modal -->
+  <div class="modal-overlay" id="customization-modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header-img">
+        <img src="" alt="Imagem do Item" id="modal-item-img">
+        <button class="modal-close-btn" id="btn-close-modal" aria-label="Fechar modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="modal-body">
+        <h3 class="modal-item-title" id="modal-item-title">X-Montanha</h3>
+        <p class="modal-item-desc" id="modal-item-desc">Pão, 2 carnes, 2 queijos, cheddar, ovo, bacon, salada e molho especial.</p>
+
+        <!-- Removals Options (Grátis) -->
+        <div class="option-group">
+          <div class="option-group-title">
+            <span>Deseja remover algum ingrediente?</span>
+            <span class="option-group-subtitle">Sem custo extra</span>
+          </div>
+          <div class="custom-checkbox-list">
+            <label class="checkbox-item">
+              <div class="checkbox-left">
+                <input type="checkbox" name="removal" value="Sem salada">
+                <span>Sem salada (Alface / Tomate)</span>
+              </div>
+            </label>
+            <label class="checkbox-item">
+              <div class="checkbox-left">
+                <input type="checkbox" name="removal" value="Sem molho especial">
+                <span>Sem molho especial</span>
+              </div>
+            </label>
+            <label class="checkbox-item">
+              <div class="checkbox-left">
+                <input type="checkbox" name="removal" value="Sem cebola">
+                <span>Sem cebola</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Paid Additions Options -->
+        <div class="option-group">
+          <div class="option-group-title">
+            <span>Turbine seu lanche! (Adicionais)</span>
+            <span class="option-group-subtitle">Opções pagas</span>
+          </div>
+          <div class="custom-checkbox-list">
+            <label class="checkbox-item">
+              <div class="checkbox-left">
+                <input type="checkbox" name="addon" value="Carne extra" data-price="3.50">
+                <span>Carne Extra Hambúrguer</span>
+              </div>
+              <span class="addon-price">+ R$ 3,50</span>
+            </label>
+            <label class="checkbox-item">
+              <div class="checkbox-left">
+                <input type="checkbox" name="addon" value="Ovo" data-price="2.00">
+                <span>Ovo Frito na Chapa</span>
+              </div>
+              <span class="addon-price">+ R$ 2,00</span>
+            </label>
+            <label class="checkbox-item">
+              <div class="checkbox-left">
+                <input type="checkbox" name="addon" value="Bacon" data-price="3.00">
+                <span>Bacon Crocante</span>
+              </div>
+              <span class="addon-price">+ R$ 3,00</span>
+            </label>
+            <label class="checkbox-item">
+              <div class="checkbox-left">
+                <input type="checkbox" name="addon" value="Cheddar" data-price="2.50">
+                <span>Queijo Cheddar Cremoso</span>
+              </div>
+              <span class="addon-price">+ R$ 2,50</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Observations -->
+        <div class="option-group">
+          <div class="option-group-title">
+            <span>Observações do pedido</span>
+          </div>
+          <textarea class="obs-textarea" id="modal-obs-input" placeholder="Ex: Ponto da carne bem passado, capricha no molho..."></textarea>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <div class="quantity-control">
+          <button class="qty-btn" id="modal-qty-minus" aria-label="Diminuir quantidade"><i class="fa-solid fa-minus"></i></button>
+          <span class="qty-val" id="modal-qty-val">1</span>
+          <button class="qty-btn" id="modal-qty-plus" aria-label="Aumentar quantidade"><i class="fa-solid fa-plus"></i></button>
+        </div>
+
+        <button class="btn-confirm-add" id="btn-add-to-cart-modal">
+          <span>Adicionar</span>
+          <span id="modal-total-price">R$ 15,00</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Sticky Cart Bar -->
+  <div class="floating-cart-bar" id="floating-cart-bar">
+    <div class="floating-cart-info">
+      <div class="floating-icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <div class="floating-count" id="floating-cart-count">0</div>
+      </div>
+      <div>
+        <div class="floating-total-label">Total c/ Frete R$ 5,00</div>
+        <div class="floating-total-price" id="floating-cart-price">R$ 0,00</div>
+      </div>
+    </div>
+    <button class="btn-open-cart" id="btn-open-cart-floating">
+      <span>Ver Carrinho</span>
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <!-- Slide-Over Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay">
+    <div class="cart-drawer">
+      <div class="drawer-header">
+        <h3 class="drawer-title">
+          <i class="fa-solid fa-basket-shopping"></i> Meu Carrinho
+        </h3>
+        <button class="modal-close-btn" id="btn-close-drawer" aria-label="Fechar carrinho"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- Quick Delivery Toggle inside Cart Drawer -->
+      <div class="drawer-delivery-selector">
+        <span class="selector-label"><i class="fa-solid fa-truck-fast"></i> Modo de Pedido:</span>
+        <div class="selector-toggle-group">
+          <button type="button" class="selector-toggle-btn active" id="drawer-btn-delivery">
+            <i class="fa-solid fa-motorcycle"></i> Entrega (Frete R$ 5)
+          </button>
+          <button type="button" class="selector-toggle-btn" id="drawer-btn-pickup">
+            <i class="fa-solid fa-store"></i> Retirada (Grátis)
+          </button>
+        </div>
+      </div>
+
+      <div class="drawer-body" id="cart-drawer-items-container">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="drawer-footer" id="cart-drawer-footer">
+        <div class="cart-summary-line">
+          <span>Subtotal dos Itens</span>
+          <span id="cart-subtotal-val">R$ 0,00</span>
+        </div>
+        <div class="cart-summary-line" id="cart-shipping-line">
+          <span><i class="fa-solid fa-motorcycle"></i> Taxa de Entrega (Frete Fixo)</span>
+          <span id="cart-shipping-val" class="delivery-highlight">R$ 5,00</span>
+        </div>
+        <div class="cart-summary-line total-line">
+          <span>Total do Pedido</span>
+          <span class="total-val" id="cart-total-val">R$ 0,00</span>
+        </div>
+
+        <button class="btn-proceed-checkout" id="btn-open-checkout-modal">
+          <i class="fa-solid fa-credit-card"></i> Avançar para o Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Address & Payment Form Modal -->
+  <div class="modal-overlay" id="checkout-modal-overlay">
+    <div class="modal-container" style="max-width: 580px;">
+      <div class="drawer-header">
+        <h3 class="drawer-title">
+          <i class="fa-solid fa-truck-ramp-box"></i> Finalizar Pedido
+        </h3>
+        <button class="modal-close-btn" id="btn-close-checkout" aria-label="Fechar checkout"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <form id="checkout-form" class="modal-body">
+        
+        <!-- Order Summary Box -->
+        <div class="checkout-summary-box">
+          <div class="checkout-summary-header">
+            <i class="fa-solid fa-receipt"></i>
+            <span>Resumo de Valores</span>
+          </div>
+          <div class="checkout-summary-row">
+            <span>Subtotal dos Produtos:</span>
+            <span id="checkout-summary-subtotal">R$ 0,00</span>
+          </div>
+          <div class="checkout-summary-row" id="checkout-summary-frete-row">
+            <span><i class="fa-solid fa-motorcycle"></i> Taxa de Entrega (Frete Fixo):</span>
+            <span id="checkout-summary-frete" class="badge-frete">R$ 5,00</span>
+          </div>
+          <div class="checkout-summary-row checkout-summary-total">
+            <span>Total Final a Pagar:</span>
+            <span id="checkout-summary-total">R$ 0,00</span>
+          </div>
+        </div>
+
+        <!-- Customer Info -->
+        <div class="form-group">
+          <label for="customer-name">Seu Nome Completo <span>*</span></label>
+          <input type="text" id="customer-name" class="form-control" placeholder="Ex: João da Silva" required>
+        </div>
+
+        <div class="form-group">
+          <label for="customer-phone">Telefone / WhatsApp <span>*</span></label>
+          <input type="tel" id="customer-phone" class="form-control" placeholder="(21) 9XXXX-XXXX" maxlength="15" required>
+        </div>
+
+        <!-- Delivery Type Selection -->
+        <div class="form-group">
+          <label>Forma de Entrega <span>*</span></label>
+          <div class="delivery-type-toggle">
+            <div class="toggle-option active" id="type-delivery" data-type="delivery">
+              <i class="fa-solid fa-motorcycle"></i> Entrega (+ R$ 5,00)
+            </div>
+            <div class="toggle-option" id="type-pickup" data-type="pickup">
+              <i class="fa-solid fa-store"></i> Retirada no Local (Grátis)
+            </div>
+          </div>
+        </div>
+
+        <!-- Address Fields (Shown for Delivery) -->
+        <div id="address-fields-wrapper">
+          <div class="form-group">
+            <label for="address-street">Endereço (Rua / Av) <span>*</span></label>
+            <input type="text" id="address-street" class="form-control" placeholder="Ex: Rua das Flores">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+            <div class="form-group">
+              <label for="address-number">Número <span>*</span></label>
+              <input type="text" id="address-number" class="form-control" placeholder="Ex: 123">
+            </div>
+            <div class="form-group">
+              <label for="address-neighborhood">Bairro <span>*</span></label>
+              <input type="text" id="address-neighborhood" class="form-control" placeholder="Ex: Centro">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="address-comp">Complemento / Ponto de Referência</label>
+            <input type="text" id="address-comp" class="form-control" placeholder="Ex: Apt 202 / Próximo à praça">
+          </div>
+        </div>
+
+        <!-- Payment Method -->
+        <div class="form-group">
+          <label>Forma de Pagamento <span>*</span></label>
+          <div class="payment-options-grid">
+            <label class="payment-card active" id="pay-card-pix">
+              <input type="radio" name="payment-method" value="PIX" checked>
+              <i class="fa-solid fa-qrcode" style="color: #25D366;"></i>
+              <span>PIX</span>
+            </label>
+            <label class="payment-card" id="pay-card-credito">
+              <input type="radio" name="payment-method" value="Cartão de Crédito">
+              <i class="fa-solid fa-credit-card" style="color: #FFB800;"></i>
+              <span>Crédito</span>
+            </label>
+            <label class="payment-card" id="pay-card-debito">
+              <input type="radio" name="payment-method" value="Cartão de Débito">
+              <i class="fa-solid fa-credit-card" style="color: #FF5722;"></i>
+              <span>Débito</span>
+            </label>
+            <label class="payment-card" id="pay-card-dinheiro">
+              <input type="radio" name="payment-method" value="Dinheiro">
+              <i class="fa-solid fa-money-bill-wave" style="color: #4CAF50;"></i>
+              <span>Dinheiro</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Cash Change (Troco) -->
+        <div class="form-group" id="cash-change-wrapper" style="display: none;">
+          <label for="cash-change-val">Precisa de troco para quanto?</label>
+          <input type="text" id="cash-change-val" class="form-control" placeholder="Ex: Troco para R$ 50,00 ou Não preciso">
+        </div>
+
+        <!-- Submit Button -->
+        <div style="margin-top: 1.5rem;">
+          <button type="submit" class="btn-proceed-checkout" id="btn-submit-order" style="font-size: 1.05rem;">
+            <i class="fa-brands fa-whatsapp"></i> Enviar Pedido no WhatsApp (<span id="btn-checkout-total">R$ 0,00</span>)
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal for Posters -->
+  <div class="lightbox-overlay" id="poster-lightbox-overlay">
+    <div class="lightbox-modal">
+      <button class="lightbox-close-btn" id="btn-close-lightbox" aria-label="Fechar ampliação"><i class="fa-solid fa-xmark"></i></button>
+      <img src="" alt="Cardápio Oficial Ampliado" id="lightbox-image">
+      <div class="lightbox-caption" id="lightbox-caption">Cardápio Oficial Davi Lanches</div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-header">
+            <img src="assets/images/logo_davi_lanches.jpg" alt="Logo Oficial Davi Lanches" class="footer-logo-img">
+            <div>
+              <h2>DAVI <span>LANCHES</span></h2>
+              <span class="footer-motto">Sabor em cada mordida!</span>
+            </div>
+          </div>
+          <p>Hamburgueria tradicional no Rio de Janeiro Since 2015. Qualidade, sabor e satisfação em cada mordida! Entregas rápidas com frete fixo de R$ 5,00 em toda a região.</p>
+          <div class="social-links">
+            <a href="https://instagram.com/DAVILANCHES" target="_blank" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/5521973112436" target="_blank" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" class="social-icon" aria-label="iFood"><i class="fa-solid fa-utensils"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Atendimento & Frete</h3>
+          <ul class="footer-links-list">
+            <li><i class="fa-brands fa-whatsapp" style="color: #25D366;"></i> (21) 97311-2436</li>
+            <li><i class="fa-solid fa-motorcycle" style="color: #FFB800;"></i> <strong>Frete Fixo: R$ 5,00</strong></li>
+            <li><i class="fa-solid fa-clock" style="color: #FF5722;"></i> Terça a Domingo a partir das 18h</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Pagamentos</h3>
+          <ul class="footer-links-list">
+            <li><i class="fa-solid fa-qrcode" style="color: #25D366;"></i> PIX Instantâneo</li>
+            <li><i class="fa-solid fa-credit-card" style="color: #FFB800;"></i> Cartões Crédito / Débito</li>
+            <li><i class="fa-solid fa-money-bill-wave" style="color: #4CAF50;"></i> Dinheiro com Troco</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Davi Lanches Hamburgueria. Todos os direitos reservados. Sabor em cada mordida! 🍔🔥</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Main Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
