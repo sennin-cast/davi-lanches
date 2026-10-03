@@ -1,0 +1,10 @@
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Obsidian Workspace State
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json

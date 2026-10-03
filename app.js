@@ -17,9 +17,10 @@ const PRODUCTS_DATA = [
     price: 36.99,
     category: "combos",
     description: "4 X-Burguer + Batata Frita G + Refrigerante 2L",
-    image: "assets/images/combo_01_banner.jpg",
+    image: "assets/images/combo_01.jpg",
     badge: "Economia",
-    badgeType: "promo"
+    badgeType: "promo",
+    comboBurgers: ["1º X-Burguer", "2º X-Burguer", "3º X-Burguer", "4º X-Burguer"]
   },
   {
     id: "c2",
@@ -27,19 +28,21 @@ const PRODUCTS_DATA = [
     price: 29.99,
     category: "combos",
     description: "2 X-Tudo + 2 Batatas Fritas P",
-    image: "assets/images/combo_02_banner.jpg",
+    image: "assets/images/combo_02.jpg",
     badge: "Top Vendas",
-    badgeType: "promo"
+    badgeType: "promo",
+    comboBurgers: ["1º X-Tudo", "2º X-Tudo"]
   },
   {
     id: "c3",
     name: "Combo 03",
     price: 19.99,
     category: "combos",
-    description: "1 X-Tudo + 1 Batata Frita P + 1 Guaracamp",
-    image: "assets/images/cardapio_combos_poster.jpg",
+    description: "1 X-Tudo + 1 Batata Frita P + 1 Guaravita",
+    image: "assets/images/combo_03.jpg",
     badge: "Individual",
-    badgeType: "promo"
+    badgeType: "promo",
+    comboBurgers: ["X-Tudo"]
   },
   {
     id: "c4",
@@ -47,9 +50,10 @@ const PRODUCTS_DATA = [
     price: 59.99,
     category: "combos",
     description: "4 X-Tudo + Batata Frita G + Coca-Cola 2L",
-    image: "assets/images/combo_01_banner.jpg",
+    image: "assets/images/combo_04.jpg",
     badge: "Família",
-    badgeType: "promo"
+    badgeType: "promo",
+    comboBurgers: ["1º X-Tudo", "2º X-Tudo", "3º X-Tudo", "4º X-Tudo"]
   },
   {
     id: "c5",
@@ -57,9 +61,10 @@ const PRODUCTS_DATA = [
     price: 40.00,
     category: "combos",
     description: "3 X-Montanha (O Mais Pedido da Galera!)",
-    image: "assets/images/combo_montanha_banner.jpg",
+    image: "assets/images/combo_montanha.jpg",
     badge: "Mais Pedido",
-    badgeType: "mais-pedido"
+    badgeType: "mais-pedido",
+    comboBurgers: ["1º X-Montanha", "2º X-Montanha", "3º X-Montanha"]
   },
   {
     id: "c6",
@@ -67,9 +72,10 @@ const PRODUCTS_DATA = [
     price: 42.00,
     category: "combos",
     description: "3 X-Tudo + Batata M + Refri 2L",
-    image: "assets/images/cardapio_combos_poster.jpg",
+    image: "assets/images/combo_06.jpg",
     badge: "Promoção",
-    badgeType: "promo"
+    badgeType: "promo",
+    comboBurgers: ["1º X-Tudo", "2º X-Tudo", "3º X-Tudo"]
   },
   {
     id: "c7",
@@ -77,9 +83,10 @@ const PRODUCTS_DATA = [
     price: 45.00,
     category: "combos",
     description: "5 X-Duplo",
-    image: "assets/images/cardapio_combos_poster.jpg",
+    image: "assets/images/x_duplo.jpg",
     badge: "Super Fome",
-    badgeType: "promo"
+    badgeType: "promo",
+    comboBurgers: ["1º X-Duplo", "2º X-Duplo", "3º X-Duplo", "4º X-Duplo", "5º X-Duplo"]
   },
   {
     id: "c8",
@@ -87,9 +94,10 @@ const PRODUCTS_DATA = [
     price: 22.00,
     category: "combos",
     description: "X-Montanha + Batata P + Guaracamp",
-    image: "assets/images/x_montanha.jpg",
+    image: "assets/images/combo_montanha.jpg",
     badge: "Combo Individual",
-    badgeType: "promo"
+    badgeType: "promo",
+    comboBurgers: ["X-Montanha"]
   },
   {
     id: "c9",
@@ -97,9 +105,10 @@ const PRODUCTS_DATA = [
     price: 18.00,
     category: "combos",
     description: "X-Calabresa + Batata P + Guaracamp",
-    image: "assets/images/cardapio_combos_poster.jpg",
+    image: "assets/images/x_tudo.jpg",
     badge: "Especial",
-    badgeType: "promo"
+    badgeType: "promo",
+    comboBurgers: ["X-Calabresa"]
   },
   {
     id: "c10",
@@ -107,9 +116,10 @@ const PRODUCTS_DATA = [
     price: 40.00,
     category: "combos",
     description: "2 X-Montanha + 2 Batatas P",
-    image: "assets/images/x_montanha.jpg",
+    image: "assets/images/combo_montanha.jpg",
     badge: "Dupla",
-    badgeType: "promo"
+    badgeType: "promo",
+    comboBurgers: ["1º X-Montanha", "2º X-Montanha"]
   },
 
   // --- SANDUÍCHES ---
@@ -119,15 +129,15 @@ const PRODUCTS_DATA = [
     price: 8.00,
     category: "sanduiches",
     description: "Pão, carne, queijo cheddar, salada e molho especial.",
-    image: "assets/images/cardapio_sanduiches_poster.jpg"
+    image: "assets/images/x_tudo.jpg"
   },
   {
     id: "s2",
     name: "Egg-Burguer",
     price: 10.00,
     category: "sanduiches",
-    description: "Pão, carne, queijo cheddar, ovo, salada e molho especial.",
-    image: "assets/images/cardapio_sanduiches_poster.jpg"
+    description: "Pão, carne, queijo cheddar, ovo frito na chapa, salada e molho especial.",
+    image: "assets/images/egg_burguer.jpg"
   },
   {
     id: "s3",
@@ -135,7 +145,7 @@ const PRODUCTS_DATA = [
     price: 12.00,
     category: "sanduiches",
     description: "Pão, carne, queijo cheddar, bacon crocante, salada e molho especial.",
-    image: "assets/images/x_bacon.jpg"
+    image: "assets/images/x_bacon_novo.jpg"
   },
   {
     id: "s4",
@@ -143,7 +153,7 @@ const PRODUCTS_DATA = [
     price: 13.00,
     category: "sanduiches",
     description: "Pão, carne, queijo cheddar, calabresa fatiada na chapa, salada e molho especial.",
-    image: "assets/images/cardapio_sanduiches_poster.jpg"
+    image: "assets/images/x_tudo.jpg"
   },
   {
     id: "s5",
@@ -151,7 +161,7 @@ const PRODUCTS_DATA = [
     price: 13.00,
     category: "sanduiches",
     description: "Pão, carne, queijo cheddar, presunto, ovo, bacon, calabresa, salada e molho especial.",
-    image: "assets/images/cardapio_sanduiches_poster.jpg"
+    image: "assets/images/x_tudo.jpg"
   },
   {
     id: "s6",
@@ -159,15 +169,15 @@ const PRODUCTS_DATA = [
     price: 13.00,
     category: "sanduiches",
     description: "Pão, 2 carnes, 2 queijos cheddar, salada e molho especial.",
-    image: "assets/images/cardapio_sanduiches_poster.jpg"
+    image: "assets/images/x_duplo.jpg"
   },
   {
     id: "s7",
     name: "Duplo Cheddar",
     price: 13.00,
     category: "sanduiches",
-    description: "Pão, 2 carnes, 2 queijos, 2 cheddar, salada e molho especial.",
-    image: "assets/images/cardapio_sanduiches_poster.jpg"
+    description: "Pão, 2 carnes, 2 queijos, 2 cheddar cremoso, salada e molho especial.",
+    image: "assets/images/x_duplo.jpg"
   },
   {
     id: "s8",
@@ -175,7 +185,7 @@ const PRODUCTS_DATA = [
     price: 14.00,
     category: "sanduiches",
     description: "Pão, 2 carnes, 2 queijos cheddar, bacon crocante, salada e molho especial.",
-    image: "assets/images/x_bacon.jpg"
+    image: "assets/images/x_bacon_novo.jpg"
   },
   {
     id: "s9",
@@ -183,7 +193,7 @@ const PRODUCTS_DATA = [
     price: 15.00,
     category: "sanduiches",
     description: "Pão, 2 carnes, 2 queijos, cheddar, ovo, bacon, salada e molho especial.",
-    image: "assets/images/x_montanha.jpg",
+    image: "assets/images/combo_montanha.jpg",
     badge: "Mais Pedido",
     badgeType: "mais-pedido"
   },
@@ -193,15 +203,15 @@ const PRODUCTS_DATA = [
     price: 18.00,
     category: "sanduiches",
     description: "Pão, 2 carnes, 2 queijos, 2 cheddar, 2 ovos, 2 presuntos, bacon, salada e molho especial.",
-    image: "assets/images/x_montanha.jpg"
+    image: "assets/images/x_delirio.jpg"
   },
   {
     id: "s11",
     name: "X-Delírio",
     price: 19.00,
     category: "sanduiches",
-    description: "Pão, 3 carnes, 3 queijos, 2 ovos, bacon, salada e molho especial.",
-    image: "assets/images/x_montanha.jpg"
+    description: "Pão, 3 carnes, 3 queijos, 2 ovos, bacon crocante, salada e molho especial.",
+    image: "assets/images/x_delirio.jpg"
   },
 
   // --- BATATAS FRITAS ---
@@ -399,6 +409,34 @@ function openItemModal(productId) {
   // Uncheck all removals and addons
   document.querySelectorAll('#customization-modal-overlay input[type="checkbox"]').forEach(cb => cb.checked = false);
 
+  // Handle Combo specific addon burger target selectors
+  const isCombo = product.category === "combos";
+  const comboNotice = document.getElementById("combo-addon-notice");
+  if (comboNotice) comboNotice.style.display = isCombo ? "flex" : "none";
+
+  const addonCards = document.querySelectorAll('#customization-modal-overlay .addon-card');
+  addonCards.forEach(card => {
+    const targetBox = card.querySelector('.combo-target-box');
+    const select = card.querySelector('.combo-burger-select');
+    if (targetBox) targetBox.style.display = "none";
+
+    if (select && isCombo) {
+      const burgers = product.comboBurgers && product.comboBurgers.length > 0 
+        ? product.comboBurgers 
+        : ["1º Hambúrguer", "2º Hambúrguer"];
+      
+      const cb = card.querySelector('input[name="addon"]');
+      const basePrice = cb ? parseFloat(cb.getAttribute("data-price") || 0) : 0;
+      
+      let optionsHtml = burgers.map(b => `<option value="${b}">🍔 ${b}</option>`).join('');
+      if (burgers.length > 1) {
+        optionsHtml += `<option value="all">🔥 Em todos os ${burgers.length} burgueres (+ ${formatBRL(basePrice * burgers.length)})</option>`;
+      }
+      select.innerHTML = optionsHtml;
+      select.selectedIndex = 0;
+    }
+  });
+
   updateModalTotal();
   modalOverlay.classList.add("active");
   document.body.style.overflow = "hidden";
@@ -413,12 +451,23 @@ function updateModalTotal() {
   if (!activeModalProduct) return;
   
   let basePrice = activeModalProduct.price;
+  const isCombo = activeModalProduct.category === "combos";
   
-  // Add active paid addons
-  const activeAddons = document.querySelectorAll('#customization-modal-overlay input[name="addon"]:checked');
-  activeAddons.forEach(cb => {
-    const addonPrice = parseFloat(cb.getAttribute("data-price") || 0);
-    basePrice += addonPrice;
+  // Calculate active paid addons with combo multiplier if applicable
+  const activeAddonCards = document.querySelectorAll('#customization-modal-overlay .addon-card');
+  activeAddonCards.forEach(card => {
+    const cb = card.querySelector('input[name="addon"]');
+    if (cb && cb.checked) {
+      const addonPrice = parseFloat(cb.getAttribute("data-price") || 0);
+      let multiplier = 1;
+      if (isCombo) {
+        const select = card.querySelector('.combo-burger-select');
+        if (select && select.value === "all" && activeModalProduct.comboBurgers) {
+          multiplier = activeModalProduct.comboBurgers.length;
+        }
+      }
+      basePrice += (addonPrice * multiplier);
+    }
   });
 
   const total = basePrice * modalQuantity;
@@ -432,15 +481,40 @@ function addModalItemToCart() {
   const removals = Array.from(document.querySelectorAll('#customization-modal-overlay input[name="removal"]:checked'))
                         .map(cb => cb.value);
 
-  const addons = Array.from(document.querySelectorAll('#customization-modal-overlay input[name="addon"]:checked'))
-                      .map(cb => ({
-                        name: cb.value,
-                        price: parseFloat(cb.getAttribute("data-price") || 0)
-                      }));
+  const isCombo = activeModalProduct.category === "combos";
+  const addons = [];
+  const activeAddonCards = document.querySelectorAll('#customization-modal-overlay .addon-card');
+  
+  activeAddonCards.forEach(card => {
+    const cb = card.querySelector('input[name="addon"]');
+    if (cb && cb.checked) {
+      const addonBasePrice = parseFloat(cb.getAttribute("data-price") || 0);
+      let targetDesc = "";
+      let addonFinalPrice = addonBasePrice;
+
+      if (isCombo) {
+        const select = card.querySelector('.combo-burger-select');
+        if (select) {
+          if (select.value === "all" && activeModalProduct.comboBurgers) {
+            targetDesc = `em todos os ${activeModalProduct.comboBurgers.length} burgueres`;
+            addonFinalPrice = addonBasePrice * activeModalProduct.comboBurgers.length;
+          } else {
+            targetDesc = select.value;
+          }
+        }
+      }
+
+      addons.push({
+        name: cb.value,
+        price: addonFinalPrice,
+        target: targetDesc
+      });
+    }
+  });
 
   const obs = modalObs.value.trim();
 
-  // Unit price with addons
+  // Unit price with all addons calculated
   let unitPrice = activeModalProduct.price;
   addons.forEach(a => unitPrice += a.price);
 
@@ -536,7 +610,7 @@ function updateCartUI() {
           </div>
 
           <div class="cart-item-meta">
-            ${item.addons.length > 0 ? `<span class="meta-tag meta-add">+ ${item.addons.map(a => a.name).join(', ')}</span>` : ''}
+            ${item.addons.length > 0 ? `<span class="meta-tag meta-add">+ ${item.addons.map(a => `${a.name}${a.target ? ` [no ${a.target}]` : ''}`).join(', ')}</span>` : ''}
             ${item.removals.length > 0 ? `<span class="meta-tag meta-rem">- ${item.removals.join(', ')}</span>` : ''}
             ${item.obs ? `<span class="meta-tag">Obs: "${item.obs}"</span>` : ''}
           </div>
@@ -683,8 +757,30 @@ function attachEventListeners() {
     updateModalTotal();
   });
 
-  // Modal Checkbox Change recalculate
-  document.querySelectorAll('#customization-modal-overlay input[type="checkbox"]').forEach(cb => {
+  // Modal Checkbox Change recalculate & Combo Target Box Toggle
+  document.querySelectorAll('#customization-modal-overlay .addon-card').forEach(card => {
+    const cb = card.querySelector('input[name="addon"]');
+    const targetBox = card.querySelector('.combo-target-box');
+    const select = card.querySelector('.combo-burger-select');
+
+    if (cb) {
+      cb.addEventListener("change", () => {
+        if (activeModalProduct && activeModalProduct.category === "combos" && cb.checked) {
+          if (targetBox) targetBox.style.display = "flex";
+        } else {
+          if (targetBox) targetBox.style.display = "none";
+        }
+        updateModalTotal();
+      });
+    }
+
+    if (select) {
+      select.addEventListener("change", updateModalTotal);
+    }
+  });
+
+  // Removals checkboxes
+  document.querySelectorAll('#customization-modal-overlay input[name="removal"]').forEach(cb => {
     cb.addEventListener("change", updateModalTotal);
   });
 
@@ -833,7 +929,7 @@ function handleOrderSubmit(e) {
     message += `${index + 1}. *${item.quantity}x ${item.name}* - ${formatBRL(itemTotal)}\n`;
     
     if (item.addons.length > 0) {
-      message += `   └ *Adicionais:* ${item.addons.map(a => a.name).join(', ')}\n`;
+      message += `   └ *Adicionais:* ${item.addons.map(a => `${a.name}${a.target ? ` [no ${a.target}]` : ''}`).join(', ')}\n`;
     }
     if (item.removals.length > 0) {
       message += `   └ *Remover:* ${item.removals.join(', ')}\n`;

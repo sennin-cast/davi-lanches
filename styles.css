@@ -1704,3 +1704,137 @@ body {
   font-weight: 600;
   letter-spacing: 0.5px;
 }
+
+/* ==========================================================================
+   COMBO ADDON SELECTOR & POSTERS GRID ENHANCEMENTS
+   ========================================================================== */
+
+/* Posters Grid Layout */
+.posters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+  margin-bottom: 3.5rem;
+}
+.poster-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-amber);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  background: var(--surface-card);
+  transition: var(--transition-normal);
+  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.poster-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-normal);
+}
+.poster-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Combo Notice Banner */
+.combo-notice-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: linear-gradient(135deg, rgba(255, 184, 0, 0.15), rgba(255, 87, 34, 0.12));
+  border: 1px solid var(--border-amber);
+  color: var(--brand-amber);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 0.85rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+.combo-notice-banner i {
+  font-size: 1.15rem;
+  color: var(--brand-amber);
+  flex-shrink: 0;
+}
+
+/* Addon Card with Target Selector */
+.addon-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: var(--transition-fast);
+}
+.addon-card:hover {
+  border-color: rgba(255, 184, 0, 0.4);
+}
+.addon-card .checkbox-item {
+  border: none;
+  background: transparent;
+  border-radius: 0;
+  width: 100%;
+}
+.combo-target-box {
+  background: rgba(0, 0, 0, 0.45);
+  border-top: 1px dashed rgba(255, 184, 0, 0.3);
+  padding: 0.75rem 0.95rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  animation: slideDown 0.25s ease;
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.combo-target-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--brand-amber);
+}
+.combo-target-header i {
+  color: var(--brand-orange);
+}
+.combo-burger-select {
+  width: 100%;
+  background: var(--bg-dark);
+  color: var(--text-main);
+  border: 1px solid var(--border-amber);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.8rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: var(--transition-fast);
+}
+.combo-burger-select:focus {
+  border-color: var(--brand-orange);
+  box-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
+}
+.combo-burger-select option {
+  background: #1a1a1a;
+  color: #FFF;
+  padding: 0.5rem;
+}
+
+/* Cart Item Target Tag */
+.meta-tag.meta-target {
+  background: rgba(255, 184, 0, 0.15);
+  color: var(--brand-amber);
+  border: 1px solid rgba(255, 184, 0, 0.35);
+  font-weight: 600;
+}
+
