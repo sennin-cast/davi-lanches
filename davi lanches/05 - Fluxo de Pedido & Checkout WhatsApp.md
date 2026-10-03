@@ -57,6 +57,9 @@ O método `handleOrderSubmit(e)` em `app.js` compila todas as informações do p
 
 ### Exemplo de Mensagem Gerada:
 
+> [!TIP] **Regra de Adicionais em Combos Integrada**  
+> Em qualquer combo com múltiplos lanches, ao marcar um adicional pago, o cliente especifica no modal em qual hambúrguer deseja o item (ou se deseja em todos os burgueres). Essa especificação é automaticamente anexada no resumo do carrinho e no comprovante do WhatsApp: `+ Bacon [no 2º X-Montanha]`.
+
 ```text
 🍔 *NOVO PEDIDO - DAVI LANCHES* 🍔
 ------------------------------------
